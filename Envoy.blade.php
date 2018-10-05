@@ -3,5 +3,6 @@
 @task('deploy', ['on' => ['web-1', 'web-2']])
     cd /var/www/deploylaravel
     git pull origin master
+    composer install --no-dev
     php artisan migrate
 @endtask
